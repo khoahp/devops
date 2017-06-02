@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
 
-<service-builder package-path="simpleform">
-	<namespace>FOO</namespace>
+<service-builder package-path="com.fds.devops.simpleform">
+	<namespace>SimpleForm</namespace>
 	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
-	<entity local-service="true" name="Foo" remote-service="true" uuid="true">
+	<entity local-service="true" name="SimpleFrom" remote-service="true" table="do_simpleform" uuid="true">
 
 		<!-- PK fields -->
 
-		<column name="fooId" primary="true" type="long" />
+		<column name="formId" primary="true" type="long" />
 
 		<!-- Group instance -->
 
@@ -24,22 +24,23 @@
 
 		<!-- Other fields -->
 
-		<column name="field1" type="String" />
-		<column name="field2" type="boolean" />
-		<column name="field3" type="int" />
-		<column name="field4" type="Date" />
-		<column name="field5" type="String" />
+		<column name="fullName" type="String" />
+		<column name="birthday" type="Date" />
+		<column name="gender" type="int" />
+		<column name="email" type="String" />
+		<column name="address" type="String" />
+		<column name="shortDesciption" type="String" />
 
 		<!-- Order -->
 
 		<order by="asc">
-			<order-column name="field1" />
+			<order-column name="createDate" />
 		</order>
 
 		<!-- Finder methods -->
 
-		<finder name="Field2" return-type="Collection">
-			<finder-column name="field2" />
+		<finder name="GD" return-type="Collection">
+			<finder-column name="gender" />
 		</finder>
 
 		<!-- References -->
@@ -47,4 +48,9 @@
 		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
 		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
 	</entity>
+	<exceptions>
+		<exception>Email</exception>
+		<exception>BrithDay</exception>
+		<exception>FullNameLenght</exception>
+	</exceptions>
 </service-builder>

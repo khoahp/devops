@@ -1,5 +1,5 @@
 Bundle-Name: simpleform-service
-Bundle-SymbolicName: simpleform.service
+Bundle-SymbolicName: com.fds.devops.simpleform.service
 Bundle-Version: 1.0.0
 Liferay-Require-SchemaVersion: 1.0.0
 Liferay-Service: true
