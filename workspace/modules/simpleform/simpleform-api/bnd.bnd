@@ -1,0 +1,9 @@
+Bundle-Name: simpleform-api
+Bundle-SymbolicName: simpleform.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	simpleform.exception,\
+	simpleform.model,\
+	simpleform.service,\
+	simpleform.service.persistence
+-includeresource: META-INF/service.xml=../simpleform-service/service.xml
